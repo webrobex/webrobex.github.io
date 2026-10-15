@@ -2,14 +2,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Korepetycje Sikorska - Matematyka Bydgoszcz</title>
+    <title>korepetycjesikorska.pl - Matematyka Bydgoszcz</title>
+    <!-- Import czcionki Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <!-- Nawigacja (Sekcja Head) -->
+    <!-- Nawigacja z nawigacją mobilną (hamburger) -->
     <nav class="navbar">
       <div class="container nav-container">
-        <a href="#home" class="logo">Korepetycje Sikorska</a>
-        <div class="nav-links">
+        <a href="#home" class="logo">
+          <span class="logo-icon">🎓</span>
+          korepetycjesikorska.pl
+        </a>
+
+        <!-- Przycisk hamburgera dla urządzeń mobilnych -->
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Otwórz menu">
+          <span class="hamburger-icon">☰</span>
+        </button>
+
+        <!-- Linki nawigacyjne -->
+        <div class="nav-links" id="nav-links">
           <a href="#home">Strona główna</a>
           <a href="#o-mnie">O mnie</a>
           <a href="#oferta">Oferta</a>
@@ -21,13 +35,26 @@
 
     <!-- Sekcja Główna (Hero) -->
     <header id="home" class="hero">
-      <div class="container">
-        <span class="badge">Profesjonalne wsparcie w nauce</span>
-        <h1>Korepetycje z matematyki, które przynoszą efekty!</h1>
-        <p>Zrozum matematykę bez stresu i osiągaj świetne wyniki w przyjaznej atmosferze.</p>
-        <div class="hero-buttons">
-          <a href="#kontakt" class="btn primary">Zapisz się na lekcję</a>
-          <a href="#oferta" class="btn secondary">Zobacz ofertę</a>
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <span class="badge">Bydgoszcz • Zajęcia indywidualne i grupowe</span>
+          <h1>Korepetycje z matematyki</h1>
+          <p class="hero-description">Zrozum matematykę bez stresu i osiągaj świetne wyniki w przyjaznej, ciepłej atmosferze.</p>
+          
+          <!-- Lista atutów z ikonami -->
+          <ul class="features-list">
+            <li><span class="icon">👤</span> Indywidualne podejście do ucznia</li>
+            <li><span class="icon">📊</span> Pomoc w bieżącej nauce i zaległościach</li>
+            <li><span class="icon">💡</span> Skuteczna i systematyczna nauka</li>
+          </ul>
+
+          <div class="hero-buttons">
+            <a href="#kontakt" class="btn primary">Zapisz się na lekcję</a>
+            <a href="#oferta" class="btn secondary">Zobacz ofertę</a>
+          </div>
+        </div>
+        <div class="hero-image-wrapper">
+          <img src="dziewczyna_ksiazki.png" alt="Korepetycje z matematyki - Sikorska" class="hero-img" />
         </div>
       </div>
     </header>
@@ -48,16 +75,34 @@
         <h2>Oferta</h2>
         <div class="grid">
           <div class="card">
-            <h3>📚 Przygotowania do egzaminów</h3>
-            <p>Kompleksowe powtórki i zadania egzaminacyjne dopasowane do aktualnych wymagań.</p>
+            <div class="card-icon">👥</div>
+            <h3>Zajęcia indywidualne i grupowe</h3>
+            <p>Elastyczna forma nauki dopasowana do Twoich preferencji – w kameralnym gronie lub sam na sam z korepetytorem.</p>
           </div>
           <div class="card">
-            <h3>📝 Przygotowania do zaliczeń</h3>
-            <p>Skuteczna pomoc przed sprawdzianami, kartkówkami i poprawami ocen.</p>
+            <div class="card-icon">🎒</div>
+            <h3>Szkoła podstawowa</h3>
+            <p>Solidne fundamenty matematyczne i spokojne nadrabianie bieżących trudności programowych.</p>
           </div>
           <div class="card">
-            <h3>📐 Nauka wzorów oraz równań</h3>
-            <p>Tłumaczenie trudnych zagadnień w prosty i zrozumiały sposób krok po kroku.</p>
+            <div class="card-icon">🏫</div>
+            <h3>Szkoła ponadpodstawowa</h3>
+            <p>Wsparcie dla uczniów liceum i technikum na poziomie podstawowym oraz rozszerzonym.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">🎯</div>
+            <h3>Kurs do egzaminu ósmoklasisty</h3>
+            <p>Skoncentrowane przygotowanie, rozwiązywanie arkuszy i opanowanie kluczowych zagadnień egzaminacyjnych.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">📈</div>
+            <h3>Pomoc w bieżącym materiale</h3>
+            <p>Regularne wsparcie przy zadaniach domowych, bieżących lekcjach i zrozumieniu trudniejszych tematów.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">📝</div>
+            <h3>Przygotowanie do sprawdzianów</h3>
+            <p>Skuteczne powtórki materiału przed zapowiedzianymi sprawdzianami, kartkówkami i poprawami ocen.</p>
           </div>
         </div>
       </div>
@@ -69,14 +114,14 @@
         <h2>Cennik</h2>
         <div class="pricing-grid">
           <div class="price-card">
-            <h3>Godzina nauki</h3>
+            <h3>Lekcja standardowa</h3>
             <div class="price">100 zł</div>
-            <p>Standardowa lekcja indywidualna</p>
+            <p>Godzina nauki indywidualnej</p>
           </div>
           <div class="price-card featured">
-            <h3>Przygotowanie do egzaminu</h3>
+            <h3>Pakiet Egzaminacyjny</h3>
             <div class="price">300 zł</div>
-            <p>Intensywny pakiet przygotowawczy</p>
+            <p>Intensywne przygotowanie do egzaminu</p>
           </div>
           <div class="price-card">
             <h3>Lekcje indywidualne</h3>
@@ -91,33 +136,35 @@
     <section id="kontakt" class="section bg-light">
       <div class="container">
         <h2>Kontakt</h2>
-        <div class="contact-wrapper">
-          <div class="contact-info">
-            <h3>Dane adresowe</h3>
-            <p><strong>Dom studenta</strong></p>
-            <p>ul. Szkolna 4, Bydgoszcz</p>
-            <p><strong>Tel:</strong> <a href="tel:500510520">500 510 520</a></p>
-            <p><strong>Email:</strong> poczta@o2.pl</p>
+        
+        <div class="contact-header-center">
+          <h3>Wiktoria Sikorska</h3>
+          <p class="contact-subtitle">KOREPETYCJE Z MATEMATYKI</p>
+        </div>
+
+        <div class="contact-cards-grid">
+          <!-- 1. Miejsce zajęć -->
+          <div class="contact-card">
+            <div class="contact-card-icon">🏢</div>
+            <h3>Miejsce zajęć</h3>
+            <p><strong>Bydgoski Dom Technika NOT</strong><br>ul. Krzysztofa Gotowskiego 6<br>85-030 Bydgoszcz</p>
+            <a href="https://maps.google.com/?q=Bydgoski+Dom+Technika+NOT,+ul.+Krzysztofa+Gotowskiego+6,+85-030+Bydgoszcz" target="_blank" rel="noopener noreferrer" class="btn secondary full-width contact-btn">Zobacz na mapie Google</a>
           </div>
-          
-          <div class="contact-form-box">
+
+          <!-- 2. Zadzwoń do mnie -->
+          <div class="contact-card">
+            <div class="contact-card-icon">📞</div>
+            <h3>Zadzwoń do mnie</h3>
+            <p>Masz pytania lub chcesz zarezerwować termin?</p>
+            <a href="tel:518137364" class="btn primary full-width contact-btn">518 137 364</a>
+          </div>
+
+          <!-- 3. Napisz wiadomość -->
+          <div class="contact-card">
+            <div class="contact-card-icon">✉️</div>
             <h3>Napisz wiadomość</h3>
-            <!-- Formularz wysyłający bezpośrednio na adres blos@o2.pl -->
-            <form action="mailto:blos@o2.pl" method="POST" enctype="text/plain" class="form">
-              <div class="form-group">
-                <label for="name">Twoje Imię:</label>
-                <input type="text" id="name" name="Imię" required placeholder="np. Anna Kowalska" />
-              </div>
-              <div class="form-group">
-                <label for="email">Twój E-mail:</label>
-                <input type="email" id="email" name="Email" required placeholder="np. korepetycje@poczta.pl" />
-              </div>
-              <div class="form-group">
-                <label for="message">Wiadomość:</label>
-                <textarea id="message" name="Wiadomość" rows="4" required placeholder="Napisz w czym mogę Ci pomóc..."></textarea>
-              </div>
-              <button type="submit" class="btn primary full-width">Wyślij wiadomość</button>
-            </form>
+            <p>Wyślij wiadomość e-mail, a odpowiem najszybciej jak to możliwe.</p>
+            <a href="#" id="safe-email-btn" class="btn secondary full-width contact-btn">Zapisz się / Napisz</a>
           </div>
         </div>
       </div>
@@ -126,22 +173,62 @@
     <!-- Stopka -->
     <footer>
       <div class="container">
-        <p>&copy; 2026 Korepetycje Sikorska. Wszelkie prawa zastrzeżone.</p>
+        <p>&copy; 2026 korepetycjesikorska.pl. Wszelkie prawa zastrzeżone.</p>
       </div>
     </footer>
 
+    <!-- Skrypty: Obsługa menu mobilnego oraz zabezpieczenie e-maila przed spamem -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        // Zabezpieczenie e-maila
+        const user = "wiktoria";
+        const domain = "korepetycjesikorska.pl";
+        const email = user + "@" + domain;
+        const emailBtn = document.getElementById("safe-email-btn");
+        if (emailBtn) {
+          emailBtn.href = "mailto:" + email;
+        }
+
+        // Obsługa rozwijanego menu mobilnego
+        const menuBtn = document.getElementById("mobile-menu-btn");
+        const navLinks = document.getElementById("nav-links");
+        const icon = menuBtn.querySelector(".hamburger-icon");
+
+        if (menuBtn && navLinks) {
+          menuBtn.addEventListener("click", function() {
+            navLinks.classList.toggle("active");
+            const isOpen = navLinks.classList.contains("active");
+            icon.textContent = isOpen ? "✕" : "☰";
+          });
+
+          // Zamykanie menu mobilnego po kliknięciu w dowolny link
+          const links = navLinks.querySelectorAll("a");
+          links.forEach(link => {
+            link.addEventListener("click", () => {
+              if (navLinks.classList.contains("active")) {
+                navLinks.classList.remove("active");
+                icon.textContent = "☰";
+              }
+            });
+          });
+        }
+      });
+    </script>
+
     <style>
       :root {
-        --primary: #2563eb;
-        --primary-hover: #1d4ed8;
-        --text-dark: #1e293b;
-        --text-light: #64748b;
-        --bg-light: #f8fafc;
-        --border: #e2e8f0;
+        --primary-green: #536855;
+        --primary-green-hover: #3d4f3f;
+        --accent-beige: #e4ceb9;
+        --accent-beige-light: #f7ede2;
+        --bg-warm: #f7f4ef;
+        --text-dark: #1c241e;
+        --text-light: #525b54;
+        --border-color: #e2ded8;
       }
 
       body {
-        font-family: system-ui, -apple-system, sans-serif;
+        font-family: 'Poppins', system-ui, -apple-system, sans-serif;
         margin: 0;
         color: var(--text-dark);
         background-color: #ffffff;
@@ -157,9 +244,9 @@
 
       /* Navigation */
       .navbar {
-        border-bottom: 1px solid var(--border);
+        border-bottom: 1px solid var(--border-color);
         padding: 1rem 0;
-        background: rgba(255, 255, 255, 0.95);
+        background: rgba(255, 255, 255, 0.98);
         position: sticky;
         top: 0;
         backdrop-filter: blur(8px);
@@ -169,15 +256,21 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: relative;
       }
       .logo {
-        font-size: 1.25rem;
+        font-size: 1.15rem;
         font-weight: 700;
-        color: var(--text-dark);
+        color: var(--primary-green);
         text-decoration: none;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
       }
+      .logo-icon {
+        font-size: 1.25rem;
+      }
+
       .nav-links {
         display: flex;
         gap: 1.25rem;
@@ -191,70 +284,162 @@
         transition: color 0.2s;
       }
       .nav-links a:hover {
-        color: var(--primary);
+        color: var(--primary-green);
+      }
+
+      /* Hamburger menu button - niewidoczny na komputerze */
+      .mobile-menu-btn {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        color: var(--primary-green);
+        cursor: pointer;
+        padding: 0.25rem 0.5rem;
+      }
+
+      /* Responsywność menu dla wersji mobilnej */
+      @media (max-width: 768px) {
+        .mobile-menu-btn {
+          display: block;
+        }
+
+        .nav-links {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          background-color: #ffffff;
+          border-bottom: 1px solid var(--border-color);
+          padding: 1rem 0;
+          box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+          gap: 1rem;
+        }
+
+        .nav-links.active {
+          display: flex;
+        }
+
+        .nav-links a {
+          padding: 0.5rem 1.5rem;
+          width: 100%;
+          box-sizing: border-box;
+          text-align: center;
+          font-size: 1.05rem;
+        }
       }
 
       /* Hero */
       .hero {
-        background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%);
-        padding: 6rem 0;
-        text-align: center;
+        background: linear-gradient(135deg, var(--bg-warm) 0%, #ffffff 100%);
+        padding: 5rem 0;
+      }
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 3rem;
+        align-items: center;
+      }
+      @media (max-width: 768px) {
+        .hero-grid {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+        .hero-buttons {
+          justify-content: center;
+        }
+        .features-list {
+          align-items: center;
+        }
       }
       .badge {
-        background-color: #dbeafe;
-        color: var(--primary);
+        background-color: var(--accent-beige);
+        color: var(--text-dark);
         padding: 0.4rem 1rem;
         border-radius: 50px;
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         font-weight: 600;
         display: inline-block;
-        margin-bottom: 1.5rem;
+        margin-bottom: 1.25rem;
       }
       .hero h1 {
-        font-size: 3rem;
-        font-weight: 800;
-        margin-bottom: 1.25rem;
-        color: #0f172a;
+        font-size: 2.75rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: var(--primary-green);
         line-height: 1.2;
       }
-      .hero p {
-        font-size: 1.35rem;
+      .hero-description {
+        font-size: 1.15rem;
         color: var(--text-light);
-        max-width: 700px;
-        margin: 0 auto 2.5rem auto;
+        margin-bottom: 1.5rem;
       }
+
+      /* Podpunkty z atutami */
+      .features-list {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 2rem 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+      .features-list li {
+        font-size: 1rem;
+        color: var(--text-dark);
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+      .features-list .icon {
+        font-size: 1.2rem;
+      }
+
       .hero-buttons {
         display: flex;
         gap: 1rem;
+      }
+      .hero-image-wrapper {
+        display: flex;
         justify-content: center;
+      }
+      .hero-img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(83, 104, 85, 0.15);
       }
 
       /* Buttons */
       .btn {
-        padding: 0.875rem 2rem;
-        border-radius: 8px;
+        padding: 0.75rem 1.75rem;
+        border-radius: 12px;
         text-decoration: none;
         font-weight: 600;
-        transition: background 0.2s;
+        transition: all 0.2s;
         display: inline-block;
         cursor: pointer;
         border: none;
-        font-size: 1rem;
+        font-size: 0.95rem;
+        box-sizing: border-box;
+        text-align: center;
       }
       .btn.primary {
-        background-color: var(--primary);
+        background-color: var(--primary-green);
         color: white;
       }
       .btn.primary:hover {
-        background-color: var(--primary-hover);
+        background-color: var(--primary-green-hover);
       }
       .btn.secondary {
-        background-color: white;
+        background-color: var(--accent-beige);
         color: var(--text-dark);
-        border: 1px solid var(--border);
       }
       .btn.secondary:hover {
-        background-color: var(--bg-light);
+        background-color: #d8c0ab;
       }
       .full-width {
         width: 100%;
@@ -265,27 +450,28 @@
         padding: 5rem 0;
       }
       .bg-light {
-        background-color: var(--bg-light);
+        background-color: var(--bg-warm);
       }
       h2 {
-        font-size: 2.25rem;
+        font-size: 2rem;
         text-align: center;
         margin-bottom: 3rem;
         font-weight: 700;
+        color: var(--primary-green);
       }
 
       /* About */
       .about-card {
         background: white;
-        padding: 3rem;
-        border-radius: 12px;
-        border: 1px solid var(--border);
+        padding: 2.5rem;
+        border-radius: 16px;
+        border: 1px solid var(--border-color);
         max-width: 800px;
         margin: 0 auto;
         text-align: center;
-        font-size: 1.25rem;
+        font-size: 1.15rem;
         color: var(--text-light);
-        box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+        box-shadow: 0 4px 6px -1px rgba(0,0,0,0.03);
       }
 
       /* Grid & Cards */
@@ -297,15 +483,20 @@
       .card {
         background: white;
         padding: 2.5rem;
-        border-radius: 12px;
-        border: 1px solid var(--border);
+        border-radius: 16px;
+        border: 1px solid var(--border-color);
         box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+      }
+      .card-icon {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
       }
       .card h3 {
         margin-top: 0;
-        font-size: 1.25rem;
+        font-size: 1.2rem;
         margin-bottom: 1rem;
-        color: var(--primary);
+        color: var(--primary-green);
+        font-weight: 600;
       }
       .card p {
         color: var(--text-light);
@@ -321,24 +512,32 @@
       .price-card {
         background: white;
         padding: 2.5rem;
-        border-radius: 12px;
-        border: 1px solid var(--border);
+        border-radius: 16px;
+        border: 1px solid var(--border-color);
         text-align: center;
         box-shadow: 0 2px 4px rgba(0,0,0,0.02);
       }
       .price-card.featured {
-        border: 2px solid var(--primary);
+        background-color: var(--primary-green);
+        color: white;
         transform: scale(1.03);
       }
+      .price-card.featured h3, .price-card.featured p {
+        color: white;
+      }
+      .price-card.featured .price {
+        color: var(--accent-beige);
+      }
       .price-card h3 {
-        font-size: 1.25rem;
+        font-size: 1.2rem;
         margin-top: 0;
         margin-bottom: 1rem;
+        font-weight: 600;
       }
       .price {
-        font-size: 2.5rem;
+        font-size: 2.25rem;
         font-weight: 800;
-        color: var(--primary);
+        color: var(--primary-green);
         margin-bottom: 1rem;
       }
       .price-card p {
@@ -346,60 +545,66 @@
         margin: 0;
       }
 
-      /* Contact */
-      .contact-wrapper {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 3rem;
-        background: white;
-        padding: 3rem;
-        border-radius: 12px;
-        border: 1px solid var(--border);
+      /* Contact Section */
+      .contact-header-center {
+        text-align: center;
+        margin-bottom: 2.5rem;
       }
-      @media (max-width: 768px) {
-        .contact-wrapper {
-          grid-template-columns: 1fr;
-        }
+      .contact-header-center h3 {
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: var(--primary-green);
+        margin: 0;
       }
-      .contact-info h3, .contact-form-box h3 {
-        margin-top: 0;
-        margin-bottom: 1.5rem;
-      }
-      .contact-info p {
-        margin: 0.75rem 0;
+      .contact-subtitle {
+        margin: 0.25rem 0 0 0;
+        font-size: 0.9rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
         color: var(--text-light);
       }
-      .contact-info a {
-        color: var(--primary);
-        text-decoration: none;
+
+      .contact-cards-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
       }
-      .form-group {
-        margin-bottom: 1.25rem;
+      .contact-card {
+        background: white;
+        padding: 2.5rem 2rem;
+        border-radius: 16px;
+        border: 1px solid var(--border-color);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.02);
       }
-      .form-group label {
-        display: block;
-        margin-bottom: 0.5rem;
-        font-weight: 500;
-        font-size: 0.9rem;
+      .contact-card-icon {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
       }
-      .form-group input, .form-group textarea {
-        width: 100%;
-        padding: 0.75rem;
-        border: 1px solid var(--border);
-        border-radius: 6px;
-        font-family: inherit;
-        font-size: 1rem;
-        box-sizing: border-box;
+      .contact-card h3 {
+        margin: 0 0 0.75rem 0;
+        font-size: 1.2rem;
+        color: var(--primary-green);
+        font-weight: 600;
       }
-      .form-group input:focus, .form-group textarea:focus {
-        outline: none;
-        border-color: var(--primary);
+      .contact-card p {
+        color: var(--text-light);
+        font-size: 0.95rem;
+        margin: 0 0 1.5rem 0;
+        line-height: 1.5;
+      }
+      .contact-btn {
+        margin-top: auto;
       }
 
       /* Footer */
       footer {
-        background-color: #0f172a;
-        color: #94a3b8;
+        background-color: var(--primary-green);
+        color: #e2ded8;
         text-align: center;
         padding: 2rem 0;
         font-size: 0.9rem;
