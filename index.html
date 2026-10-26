@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pl" class="dark h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oponiarze.pl - Ogólnopolski Katalog i Rezerwacja Usług Oponiarskich</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            500: '#f97316',
+                            600: '#ea580c',
+                            700: '#c2410c',
+                        },
+                        darkbg: {
+                            900: '#0f172a',
+                            800: '#1e293b',
+                            700: '#334155'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #ea580c; }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans min-h-full flex flex-col antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- TOP ANNOUNCEMENT BANNER -->
+    <div class="bg-gradient-to-r from-blue-900 via-slate-900 to-amber-900 border-b border-slate-800 text-xs sm:text-sm py-2 px-4 text-center font-medium flex justify-center items-center gap-2">
+        <span class="inline-block w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
+        <span class="text-amber-300 font-bold">UWAGA:</span> Sezon zimowy tuż tuż! Rezerwuj terminy z wyprzedzeniem i unikaj kolejek.
+    </div>
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="sticky top-0 z-40 bg-slate-900/90 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-24">
+                
+                <!-- LOGO -->
+                <div class="flex items-center gap-3.5 cursor-pointer" onclick="location.reload()">
+                    <div class="w-14 h-14 bg-gradient-to-tr from-brand-600 to-brand-500 rounded-2xl flex items-center justify-center text-white shadow-xl shadow-brand-500/20 transform -rotate-3 hover:rotate-0 transition-transform duration-300 flex-shrink-0">
+                        <i class="fa-solid fa-compact-disc text-3xl"></i>
+                    </div>
+                    <div>
+                        <span class="text-3xl sm:text-4xl font-black tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-slate-200 to-brand-500 leading-none block">
+                            oponiarze<span class="text-brand-500">.pl</span>
+                        </span>
+                        <span class="block text-xs sm:text-sm text-slate-300 font-medium tracking-normal mt-1">
+                            Znajdź warsztat na wymianę opon w Twojej okolicy
+                        </span>
+                    </div>
+                </div>
+
+                <!-- ACTIONS -->
+                <div class="hidden md:flex items-center gap-6">
+                    <a href="#katalog" class="text-slate-300 hover:text-white font-medium text-sm transition-colors">Znajdź warsztat</a>
+                    <a href="tel:112" class="flex items-center gap-2 px-3.5 py-2 rounded-full bg-red-500/10 border border-red-500/30 text-red-400 text-xs font-semibold hover:bg-red-500/20 transition-all">
+                        <i class="fa-solid fa-truck-medical text-red-400 animate-pulse"></i>
+                        <span>Wulkanizacja 24h / Pomoc</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- WYSZUKIWARKA I FILTRY -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
+      <div class="bg-slate-900 rounded-2xl shadow-2xl border border-slate-800 p-6 sm:p-8 space-y-6">
+        
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 border-b border-slate-800">
+          <div>
+            <h2 class="text-2xl font-bold text-white flex items-center gap-2">
+              <i class="fas fa-magnifying-glass text-brand-500"></i>
+              Znajdź sprawdzony serwis oponiarski
+            </h2>
+            <p class="text-slate-400 text-sm mt-1">Wybierz województwo i miasto lub skorzystaj z wyszukiwania promieniowego po kodzie pocztowym</p>
+          </div>
+          <div class="flex items-center gap-2 text-xs font-semibold text-brand-400 bg-brand-500/10 px-3 py-1.5 rounded-full border border-brand-500/20 self-start md:self-auto">
+            <i class="fas fa-check-circle text-brand-500"></i> Ogólnopolski katalog bazowy
+          </div>
+        </div>
+
+        <!-- FILTRY KASKADOWE -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div>
+            <label for="filter-wojewodztwo" class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Województwo</label>
+            <select id="filter-wojewodztwo" class="w-full bg-slate-950 border border-slate-800 text-slate-200 text-sm rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-brand-500 p-3 transition font-medium">
+              <option value="">-- Wybierz województwo --</option>
+              <option value="dolnoslaskie">Dolnośląskie</option>
+              <option value="kujawsko-pomorskie">Kujawsko-Pomorskie</option>
+              <option value="lubelskie">Lubelskie</option>
+              <option value="lubuskie">Lubuskie</option>
+              <option value="lodzkie">Łódzkie</option>
+              <option value="malopolskie">Małopolskie</option>
+              <option value="mazowieckie">Mazowieckie</option>
+              <option value="opolskie">Opolskie</option>
+              <option value="podkarpackie">Podkarpackie</option>
+              <option value="podlaskie">Podlaskie</option>
+              <option value="pomorskie">Pomorskie</option>
+              <option value="slaskie">Śląskie</option>
+              <option value="swietokrzyskie">Świętokrzyskie</option>
+              <option value="warminsko-mazurskie">Warmińsko-Mazurskie</option>
+              <option value="wielkopolskie">Wielkopolskie</option>
+              <option value="zachodniopomorskie">Zachodniopomorskie</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="filter-miasto" class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Miasto</label>
+            <select id="filter-miasto" disabled class="w-full bg-slate-950 border border-slate-800 text-slate-200 text-sm rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-brand-500 p-3 transition font-medium disabled:opacity-50">
+              <option value="">Najpierw wybierz województwo</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="filter-pojazd" class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Typ pojazdu</label>
+            <select id="filter-pojazd" class="w-full bg-slate-950 border border-slate-800 text-slate-200 text-sm rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-brand-500 p-3 transition font-medium">
+              <option value="">Wszystkie pojazdy</option>
+              <option value="Osobowe">Samochód Osobowy</option>
+              <option value="SUV">SUV / 4x4</option>
+              <option value="Dostawcze">Dostawczy / BUS</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- RAMKA KODU POCZTOWEGO -->
+        <div class="mt-6 bg-slate-950/80 rounded-2xl border border-brand-500/30 p-5 sm:p-6 shadow-inner relative overflow-hidden">
+          <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-4 relative z-10">
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-brand-500/20 text-brand-400 border border-brand-500/30 text-xs font-bold shadow-md">
+                  <i class="fas fa-location-dot"></i>
+                </span>
+                <h3 class="text-base font-bold text-white">Wyszukaj po dokładnym kodzie pocztowym i promieniu odległości</h3>
+              </div>
+              <p class="text-xs text-slate-400 mt-1">Wpisz kod pocztowy (np. <span class="font-semibold text-brand-400">85-001</span>), aby znaleźć najbliższe punkty.</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-3 items-center relative z-10">
+            <div class="md:col-span-8 relative">
+              <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-500">
+                <i class="fas fa-map-pin text-brand-500"></i>
+              </div>
+              <input type="text" id="filter-kod-pocztowy" placeholder="Wpisz kod pocztowy (np. 85-001)..." class="w-full pl-10 pr-4 py-3 bg-slate-900 border border-slate-800 text-slate-100 text-sm rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-brand-500 shadow-sm transition placeholder-slate-500 font-medium">
+            </div>
+
+            <div class="md:col-span-4">
+              <div class="relative">
+                <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-500">
+                  <i class="fas fa-compass text-brand-500"></i>
+                </div>
+                <select id="filter-promien" class="w-full pl-10 pr-4 py-3 bg-slate-900 border border-slate-800 text-slate-100 text-sm rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-brand-500 shadow-sm transition font-semibold">
+                  <option value="5">Promień: do 5 km</option>
+                  <option value="10" selected>Promień: do 10 km</option>
+                  <option value="25">Promień: do 25 km</option>
+                  <option value="50">Promień: do 50 km</option>
+                  <option value="100">Promień: do 100 km</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- WYNIKI -->
+    <main id="katalog" class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 pb-4 border-b border-slate-800">
+            <div>
+                <h2 class="text-xl font-bold text-white flex items-center gap-2">
+                    <span>Dostępne serwisy oponiarskie</span>
+                    <span id="results-count" class="text-xs bg-brand-500/20 text-brand-400 border border-brand-500/30 px-2.5 py-0.5 rounded-full font-semibold">0</span>
+                </h2>
+                <p class="text-xs text-slate-400 mt-1">Wyświetlanie darmowych wizytówek warsztatów</p>
+            </div>
+        </div>
+
+        <div id="workshops-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </main>
+
+    <footer class="bg-slate-900 border-t border-slate-800 text-slate-400 py-8 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-xs text-slate-500">
+            &copy; 2026 oponiarze.pl - Wszelkie prawa zastrzeżone. Gotowość na sezon zimowy.
+        </div>
+    </footer>
+
+    <script src="js/distance.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
