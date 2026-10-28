@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- Strona główna serwisu -->
+    <url>
+        <loc>https://oponiarze.pl/</loc>
+        <lastmod>2026-10-28</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Województwo dolnośląskie -->
+    <url>
+        <loc>https://oponiarze.pl/?wojewodztwo=dolnoslaskie</loc>
+        <lastmod>2026-10-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Województwo kujawsko-pomorskie -->
+    <url>
+        <loc>https://oponiarze.pl/?wojewodztwo=kujawsko-pomorskie</loc>
+        <lastmod>2026-10-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Województwo lubelskie -->
+    <url>
+        <loc>https://oponiarze.pl/?wojewodztwo=lubelskie</loc>
+        <lastmod>2026-10-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Województwo lubuskie -->
+    <url>
+        <loc>https://oponiarze.pl/?wojewodztwo=lubuskie</loc>
+        <lastmod>2026-10-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Województwo łódzkie -->
+    <url>
+        <loc>https://oponiarze.pl/?wojewodztwo=lodzkie</loc>
+        <lastmod>2026-10-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Województwo małopolskie -->
+    <url>
+        <loc>https://oponiarze.pl/?wojewodztwo=malopolskie</loc>
+        <lastmod>2026-10-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Województwo mazowieckie -->
+    <url>
+        <loc>https://oponiarze.pl/?wojewodztwo=mazowieckie</loc>
+        <lastmod>2026-10-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Województwo opolskie -->
+    <url>
+        <loc>https://oponiarze.pl/?wojewodztwo=opolskie</loc>
+        <lastmod>2026-10-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Województwo podkarpackie -->
+    <url>
+        <loc>https://oponiarze.pl/?wojewodztwo=podkarpackie</loc>
+        <lastmod>2026-10-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Województwo podlaskie -->
+    <url>
+        <loc>https://oponiarze.pl/?wojewodztwo=podlaskie</loc>
+        <lastmod>2026-10-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Województwo pomorskie -->
+    <url>
+        <loc>https://oponiarze.pl/?wojewodztwo=pomorskie</loc>
+        <lastmod>2026-10-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Województwo śląskie -->
+    <url>
+        <loc>https://oponiarze.pl/?wojewodztwo=slaskie</loc>
+        <lastmod>2026-10-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Województwo świętokrzyskie -->
+    <url>
+        <loc>https://oponiarze.pl/?wojewodztwo=swietokrzyskie</loc>
+        <lastmod>2026-10-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Województwo warmińsko-mazurskie -->
+    <url>
+        <loc>https://oponiarze.pl/?wojewodztwo=warminsko-mazurskie</loc>
+        <lastmod>2026-10-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Województwo wielkopolskie -->
+    <url>
+        <loc>https://oponiarze.pl/?wojewodztwo=wielkopolskie</loc>
+        <lastmod>2026-10-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Województwo zachodniopomorskie -->
+    <url>
+        <loc>https://oponiarze.pl/?wojewodztwo=zachodniopomorskie</loc>
+        <lastmod>2026-10-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+</urlset>
