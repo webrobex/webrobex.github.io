@@ -1,0 +1,5 @@
+Plaintext
+User-agent: *
+Allow: /
+Allow: /data/
+Sitemap: https://oponiarze.pl/sitemap.xml
